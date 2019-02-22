@@ -1,9 +1,8 @@
-# CLI Essentials: Basic Commands in Bash
+# CLI Essentials: Navigation Commands in Bash
 
 ## Learning Goals
 
 * Demonstrate how to navigate the CLI with Bash
-* Demonstrate interacting with files and directories in the command line
 
 ## Introduction
 
