@@ -35,7 +35,7 @@ shell and its potential, you'll quickly see that it's not a as unapproachable as
 it might look when you see characters in TV shows and movies vigorously typing
 away on their computers to "hack" systems.
 
-!["Ghost in the Shell"](https://media.giphy.com/media/fsoCk5kgOcYMM/source.gif)
+!["Ghost in the Shell"](https://i.giphy.com/fsoCk5kgOcYMM.gif)
 
 ### Identify My Logged-In Username
 
@@ -45,7 +45,7 @@ Let's start simply. Let's ask the computer who I am logged in as:
 $ whoami
 ```
 
- < probably need screen shot>
+!["whoami"](https://curriculum-content.s3.amazonaws.com/prework/whoami.jpg)
 
 The `whoami` command lets you see which user account you're logged in to from a
 terminal window. This might seem obvious, especially if you're logged in on your
