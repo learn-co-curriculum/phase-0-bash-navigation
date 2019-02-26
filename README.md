@@ -15,7 +15,7 @@ There are two main command-line interfaces, or "shells", that many developers
 use. On OSX or many Linux installations, the shell is known as `bash`. For users
 on Windows-based systems, the command-line interface is called the "DOS Prompt"
 or "Powershell," which uses different commands and syntax, but can often achieve
-similar tasks. With the addition of the "Widows Subsystem for Linux" or "WSL,"
+similar tasks. With the addition of the "Windows Subsystem for Linux" or "WSL,"
 Windows users can launch a terminal emulator which runs, guess what, `bash`, just
 like a Linux or OSX system! We'll document how to use the `bash` CLI in this
 module.
@@ -104,7 +104,7 @@ We call this directory your "home" directory. Whenever you open a terminal
 session (new window, new terminal tab, launching the program for the first time
 after a reboot), you will be placed in your home directory. Said another way
 your working directory will be, by default, set to your home diretory &mdash;
-that's what makes ityour home!
+that's what makes it your home!
 
 That output is describing a location on your computer.
 
