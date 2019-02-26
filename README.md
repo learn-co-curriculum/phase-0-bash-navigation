@@ -68,7 +68,7 @@ subdirectories and so on.
 Most graphical environments today include a file manager program to view and
 manipulate the contents of the file system that may look like this:
 
-<KG: image of file system tree;>
+!["File Manager"](https://media.giphy.com/media/l0IyhxSQc20YIdPTa/giphy.gif)
 
 Since a command line interface cannot provide graphic pictures of the file
 system structure, it represents it differently. Think of the file system tree as
@@ -107,10 +107,8 @@ that's what makes it your home!
 
 That output is describing a location on your computer.
 
-<insert screenshots showing navigating from / to Users to kellyegreene with
-Finder> <insert screenshot of pwd>
-
-<pic of pwd>
+!["pwd in terminal"](https://curriculum-content.s3.amazonaws.com/prework/pwd.gif)
+!["GUI"](https://curriculum-content.s3.amazonaws.com/prework/finder.gif)
 
 `/User/kellyegreene` means that I am currently working within a directory
 `/Users` on the root (or top-most containing directory) on my machine. Within that `/Users` directory, a directory
