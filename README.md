@@ -2,6 +2,12 @@
 
 ## Learning Goals
 
+* Define a Unix path
+* Identify typical Unix "Home Directory" paths
+* Identify my logged-in username with `whoami`
+* Identify the current working directory" with `pwd` ("print working directory")
+* Navigate up one directory in the file system
+* Navigate back to a home directory
 * Demonstrate how to navigate the CLI with Bash
 
 ## Introduction
@@ -10,18 +16,12 @@ Using the CLI (command line interface) might seem like a big challenge to first-
 time users who are afraid of making mistakes that could impact their computers
 or files. Fear not! We'll step you through it.
 
-There are two main command-line interfaces, or "shells", that many developers
-use. On OSX or many Linux installations, the shell is known as `bash`. For users
-on Windows-based systems, the command-line interface is called the "DOS Prompt"
-or "Powershell," which uses different commands and syntax, but can often achieve
-similar tasks. With the addition of the "Windows Subsystem for Linux" or "WSL,"
-Windows users can launch a terminal emulator which runs, guess what, `bash`, just
-like a Linux or OSX system! We'll document how to use the `bash` CLI in this
-module.
+The command-line interfaces, or "shells", used on OSX and Linux and the "Windows Subsystem for Linux" or "WSL," is called 
+`bash`.We'll document how to use the `bash` CLI in this module.
 
 ## Demonstrate How to Navigate With `bash`
 
-To sum up: `bash` is a text-based interpreter that provides a _command-line
+To review: `bash` is a text-based interpreter that provides a _command-line
 interface_ for controlling your computer (or operating system).
 
 > **ASIDE**: Bash is actually an acronym which stands for **B**ourne-**A**gain
@@ -29,15 +29,41 @@ interface_ for controlling your computer (or operating system).
 > which came before `bash`. There are also shells that have come along _since_
 > `bash`. Nevertheless most programmers use `bash` or something very similar.
 
-Learning to navigate through your computer's file system is a great first step
-to feeling "safe" using this tool. As you start to become familiar with the
-shell and its potential, you'll quickly see that it's more approachable than it
-might look when you see characters in TV shows and movies vigorously typing away
-on their computers to "hack" systems.
+A great place to start learning about the CLI is by using it to do a task
+you're already familiar with: looking to see what's inside folders like
+your directories and desktop. Programmers call this activity: _navigating_.
+
+As you learn to navigate with the shell and get to used to it, you'll see that it's friendlier than it
+might seem at first. In no time, you'll be looking like this typing-machine from "Ghost in the Shell:"
 
 !["Ghost in the Shell"](https://i.giphy.com/fsoCk5kgOcYMM.gif)
 
-### Identify My Logged-In Username
+### Identify Our "Home Directory"
+
+Whenever you open a terminal session (new window, new terminal tab, launching the program for the first time
+after a reboot), you will be placed in your home directory. Directory names on Unix systems are written
+like: 
+
+`/parentdirectory/subdirectory/another/subdirectory/`
+
+We call a bit of text meant to communicate location on a file system a _path_. Paths use `/` to denote levels of "nesting."
+
+For example, a user's home directory is often written like: `/Users/username` or `/home/username`. The `/` on the far left of the path name means the very top of the file system "tree." The `/` directory is also called the "root" directory. It contains all the directories that contain sub-directories.
+
+Let's take a second to look at some typical home directories:
+
+`/Users/username`
+
+This means the "root" contains a directory called `Users` and `Users` contains `username`. Paths like this are typical for Mac OSX.
+
+`/home/username`
+
+This means the "root" contains a directory called `home` and `home` contains `username`. Paths like this are typical for Linux.
+
+Obviously, our names (well, most of our names) are not `username`. Instead we log into our systems as `Byron Poodle` or `Nancy the Cat`. Most home directories look something like the "logged in user's" name. How can we find out what our logged in user name is? We can ask the shell to tell us who it thinks we are. We'll use `whoami` to do just this in the next section.
+
+
+### Identify My Logged-In Username with `whoami`
 
 Let's start simply. Let's ask the computer who I am logged in as:
 
@@ -49,37 +75,19 @@ $ whoami
 
 The `whoami` command lets you see which user account you're logged in to from a
 terminal window. This might seem obvious, especially if you're logged in on your
-personal computer, but it's not always clear which account you're running
-commands as. Unix machines have multiple accounts by default (though you may not
+personal computer. Unix machines have multiple accounts by default (though you may not
 have seen them yet). Some of those accounts have superpowers and it's possible
 to really mess up your computer when you're acting as them. Sometimes before
 doing something drastic we like to run a quick `whoami` to make sure we're doing
-what we want to do.
+what we want to do. Or, to install some software you might need to perform that action
+as a "super user" – kind of like when you need to enter your login password in order to
+install new software updates.
 
-### Identifying the Current Working Directory" With `pwd` ("print working directory")
+My system says I am `kellyegreene`. Based on what we learned about home directories, what
+do you think my home directory is? In the next section, we'll ask the shell to tell us
+what our home directory's path is.
 
-The files on a computer are arranged in what is called a _hierarchical directory
-structure_.  This means that they are organized in a tree-like pattern of
-directories (called folders in other systems), which may contain files and other
-directories. The first directory in the file system is called the _root
-directory_. The root directory contains files and subdirectories, which contain
-more files and subdirectories and so on.
-
-Most graphical environments today include a file manager program to view and
-manipulate the contents of the file system that may look like this:
-
-!["File Manager"](https://media.giphy.com/media/l0IyhxSQc20YIdPTa/giphy.gif)
-
-Since a command line interface cannot provide graphic pictures of the file
-system structure, it represents it differently. Think of the file system tree as
-a big room with furniture and doors to other rooms, and you are standing in it.
-At any given moment, you are located in a single directory (or "room") called
-the "working directory."  From that directory, you can files it contains ("the
-furniture in the room") and the pathway to its parent directory and the pathways
-to its subdirectories.
-
-With your terminal program open, type in `pwd` and hit return/enter to find the
-name of the working directory.
+### Identify the Current Working Directory" With `pwd` ("print working directory")
 
 ```bash
 $ pwd
@@ -90,48 +98,17 @@ is just a standard way to represent a bash prompt. Yours may or may not be a*
 `$`.
 
 You should see some output describing the directory you are currently in.
-The `pwd` command stands for "**p**rint **w**orking **d**irectory". When you
-first set up your computer, the operating system created a directory under
-the "User" directory that was named the same as your `whoami` result:
+The `pwd` command stands for "**p**rint **w**orking **d**irectory". As you
+"navigate" your file system, you might get lost. Just like wandering in a big
+city, you can look for street signs to find out where you are. The `pwd` command
+acts like those street signs. You'll never be lost again!
 
-`/Users/[your user name]`
-
-Some unix interfaces will create your directory under `/home` e.g.:
-
-`/home/[your user name]`
-
-We call this directory your "home" directory. Whenever you open a terminal
-session (new window, new terminal tab, launching the program for the first time
-after a reboot), you will be placed in your home directory. Your working
-directory will be, by default, set to your home diretory &mdash; that's what
-makes it your home!
-
-That output is describing a location on your computer.
-
-!["pwd in terminal"](https://curriculum-content.s3.amazonaws.com/prework/pwd.gif)
-!["GUI"](https://curriculum-content.s3.amazonaws.com/prework/finder.gif)
-
-`/User/kellyegreene` means that I am currently working within a directory
-`/Users` on the root (or top-most containing directory) on my machine. Within
-that `/Users` directory, a directory exists named `kellyegreene`. That's my home
+We've just used `pwd` to demonstrate that when we open a `bash` session the
+operating system automatically "puts" us in our home directory. Let's now do
+some real "navigation." In the next section we'll learn to move "up" one containing
 directory.
 
-We passed over it quickly, but the top-most directory, that contains all the folders
-and sub-folders on the machine is called the "root" directory.
-
-<pre>
-/                                <-- "the root directory"
-  etc
-  var
-  tmp
-  Users
-    kellyegreene
-    myannoyingbrother
-    grandma
-</pre>
-
-As a shortcut instead of typing `/home/[your login name]`, `bash` lets us type
-`~` as a shortcut. We'll be working with this shortcut later on.
+### Navigate Up One Directory in the File System
 
 Try typing this in the command line:
 
@@ -142,24 +119,35 @@ $ pwd
 
 You "moved up" one level of nesting, so you should now see that you are one
 level up from where you were and one level closer to the "root" directory.
-In your terminal you might see by using `pwd`:
+In your terminal see this by using `pwd`:
 
 `/Users`
 
-You should be able to make a guess about what `cd` does, but we'll explain it
-right now!
+The `cd` command stands for "**c**hange **d**irectory".
+The `..` represents the directory _above_ the working directory. The `bash` shell
+provides a series of "shortcuts" for some commonly-used file system paths. `..` means
+"this directory's containing folder.
+
+So in this command example we said: `change directory to the parent folder`.
+
+Let's use `cd` to get back to our home directory.
+
 
 ### Change Directories Using `cd`
 
-In the previous example, the `cd` command stands for "**c**hange **d**irectory".
-The `..` represents the directory _above_ the working directory.
+The `bash` shell provides default shortcut for your home directory: `~`.
 
-These are three default placeholders for your file system:
+If you try this command:
 
-- `~` Your **home** directory (already mentioned)
-- `.` The **current** directory
-- `..` The directory in which your current directory is contained—referred to as
-  the "**parent**" directory.
+```bash
+$ cd ~
+$ pwd
+```
+
+You'll see you're back in your home directory.
+
+Another shortcut, that might seem not too useful at first is `.` meaning "the current
+directory I'm in.
 
 If you try this command:
 
@@ -168,9 +156,15 @@ $ cd .
 $ pwd
 ```
 
-You should see you are still in the same directory. If you `cd ~` you'll hop
-back to your home directory. You can supply any path to the `cd` command to
-navigate to that location.
+You should see you are still in the same directory where you wrote
+the command.
+
+Otherwise, you can give a path to `cd` and it will "take" you there.
+
+Try `cd /Applications` or even `cd /`. You can run a `pwd` in these directories
+and see that you've "navigated into" them. Try `cd alksdjfalksdjfalskdjf`. What
+error does `bash` give you? Is that what you expected? We'll discuss more
+about the types of paths you can give `bash` in the next section.
 
 ### Paths in Shell
 
@@ -207,10 +201,9 @@ _absolute_ directions based on the Equator and Prime Meridian. They're not
 commonly used by humans to make decisions on where to get lunch (even if
 it points to one of our favorite pizzerias in Chicago).
 
-Paths use `/` to denote levels.
-
-So far we've been finding out where we are in the filesystem "tree," how about
-we find out what's in these directories (besides other directories)?
+So far we've been finding out where we are in the file system "tree," how about
+we find out what's in these directories (besides other directories)? We'll
+cover that in our next lesson.
 
 ## Conclusion
 
