@@ -2,12 +2,12 @@
 
 ## Learning Goals
 
-* Define a Unix Path
-* Identify typical Unix "Home Directory" Paths
+* Define a Unix path
+* Identify typical Unix "Home Directory" paths
 * Identify my logged-in username with `whoami`
-* Identify the Current Working Directory" With `pwd` ("print working directory")
-* Navigate Up One Directory in the File System
-* Navigate Back to a Home Directory
+* Identify the current working directory" with `pwd` ("print working directory")
+* Navigate up one directory in the file system
+* Navigate back to a home directory
 * Demonstrate how to navigate the CLI with Bash
 
 ## Introduction
@@ -201,9 +201,9 @@ _absolute_ directions based on the Equator and Prime Meridian. They're not
 commonly used by humans to make decisions on where to get lunch (even if
 it points to one of our favorite pizzerias in Chicago).
 
-So far we've been finding out where we are in the filesystem "tree," how about
+So far we've been finding out where we are in the file system "tree," how about
 we find out what's in these directories (besides other directories)? We'll
-cover that in our next lesson
+cover that in our next lesson.
 
 ## Conclusion
 
