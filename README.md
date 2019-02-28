@@ -1,4 +1,4 @@
-# CLI Essentials: Navigation Commands in Bash
+# Navigation Commands in Bash
 
 ## Learning Goals
 
