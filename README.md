@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Using the CLI (command line interface) might seem like a big challenge to first
+Using the CLI (command line interface) might seem like a big challenge to first-
 time users who are afraid of making mistakes that could impact their computers
 or files. Fear not! We'll step you through it.
 
@@ -31,9 +31,9 @@ interface_ for controlling your computer (or operating system).
 
 Learning to navigate through your computer's file system is a great first step
 to feeling "safe" using this tool. As you start to become familiar with the
-shell and its potential, you'll quickly see that it's not a as unapproachable as
-it might look when you see characters in TV shows and movies vigorously typing
-away on their computers to "hack" systems.
+shell and its potential, you'll quickly see that it's more approachable than it
+might look when you see characters in TV shows and movies vigorously typing away
+on their computers to "hack" systems.
 
 !["Ghost in the Shell"](https://i.giphy.com/fsoCk5kgOcYMM.gif)
 
@@ -58,12 +58,12 @@ what we want to do.
 
 ### Identifying the Current Working Directory" With `pwd` ("print working directory")
 
-The files on a computer are arranged in what is called a _hierarchical directory structure_. 
-This means that they are organized in a tree-like pattern of directories (called
-folders in other systems), which may contain files and other directories. The
-first directory in the file system is called the _root directory_. The root
-directory contains files and subdirectories, which contain more files and
-subdirectories and so on.
+The files on a computer are arranged in what is called a _hierarchical directory
+structure_.  This means that they are organized in a tree-like pattern of
+directories (called folders in other systems), which may contain files and other
+directories. The first directory in the file system is called the _root
+directory_. The root directory contains files and subdirectories, which contain
+more files and subdirectories and so on.
 
 Most graphical environments today include a file manager program to view and
 manipulate the contents of the file system that may look like this:
@@ -73,9 +73,10 @@ manipulate the contents of the file system that may look like this:
 Since a command line interface cannot provide graphic pictures of the file
 system structure, it represents it differently. Think of the file system tree as
 a big room with furniture and doors to other rooms, and you are standing in it.
-At any given moment, you are located in a single directory (or "room") called the "working
-directory."  From that directory, you can files it contains ("the furniture in the room") and the pathway to its
-parent directory and the pathways to its subdirectories.
+At any given moment, you are located in a single directory (or "room") called
+the "working directory."  From that directory, you can files it contains ("the
+furniture in the room") and the pathway to its parent directory and the pathways
+to its subdirectories.
 
 With your terminal program open, type in `pwd` and hit return/enter to find the
 name of the working directory.
@@ -101,9 +102,9 @@ Some unix interfaces will create your directory under `/home` e.g.:
 
 We call this directory your "home" directory. Whenever you open a terminal
 session (new window, new terminal tab, launching the program for the first time
-after a reboot), you will be placed in your home directory. Said another way
-your working directory will be, by default, set to your home diretory &mdash;
-that's what makes it your home!
+after a reboot), you will be placed in your home directory. Your working
+directory will be, by default, set to your home diretory &mdash; that's what
+makes it your home!
 
 That output is describing a location on your computer.
 
@@ -111,8 +112,9 @@ That output is describing a location on your computer.
 !["GUI"](https://curriculum-content.s3.amazonaws.com/prework/finder.gif)
 
 `/User/kellyegreene` means that I am currently working within a directory
-`/Users` on the root (or top-most containing directory) on my machine. Within that `/Users` directory, a directory
-exists named `kellyegreene`. That's my home directory. 
+`/Users` on the root (or top-most containing directory) on my machine. Within
+that `/Users` directory, a directory exists named `kellyegreene`. That's my home
+directory.
 
 We passed over it quickly, but the top-most directory, that contains all the folders
 and sub-folders on the machine is called the "root" directory.
@@ -128,9 +130,8 @@ and sub-folders on the machine is called the "root" directory.
     grandma
 </pre>
 
-As a shortcut instead of typing `/home/[your login name]`,
-`bash` lets us type `~` as a shortcut. We'll be working with this shortcut later
-on.
+As a shortcut instead of typing `/home/[your login name]`, `bash` lets us type
+`~` as a shortcut. We'll be working with this shortcut later on.
 
 Try typing this in the command line:
 
@@ -168,8 +169,8 @@ $ pwd
 ```
 
 You should see you are still in the same directory. If you `cd ~` you'll hop
-back to your home directory. You can supply any path to
-the `cd` command to navigate to that location.
+back to your home directory. You can supply any path to the `cd` command to
+navigate to that location.
 
 ### Paths in Shell
 
@@ -187,7 +188,7 @@ If I were in my home directory `/Users/kellyegreene` and said `cd
 mixtapes/the-masked-rapper-vol-1`, it would work! If I were in
 `/Users/annoyingbrother` and said `cd mixtapes/the-masked-rapper-vol-1`, `bash`
 would return an error because that sub-directory doesn't exist there – because
-I, Kellye Greene, am the Masked Rapper while my brother can't rhyme.
+I, Kellye Greene, am the Masked Rapper, while my brother can't rhyme.
 
 Relative paths exist to make it simpler to move around. Real life is like this
 too. If someone asks if you want to go get a slice of pizza they're probably
@@ -215,10 +216,11 @@ we find out what's in these directories (besides other directories)?
 
 As we keep exploring and working with the command line, we will start to unlock
 and understand its full potential! Adopting the terminal for command-related
-interactions can allow us to become more productive users-—we work on multiple
-projects, tasks, and easily switch contexts and folders. It's also the root (pardon
-the pun) of all computing systems. While syntax might vary between operating systems, the
-functions that we are given through terminal applications are the same.
+interactions can allow us to become more productive users – we work on multiple
+projects, tasks, and easily switch contexts and folders. It's also the root
+(pardon the pun) of all computing systems. While syntax might vary between
+operating systems, the functions that we are given through terminal applications
+are the same.
 
 ## Resources
 
