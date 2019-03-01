@@ -211,6 +211,19 @@ So far we've been finding out where we are in the file system "tree," how about
 we find out what's _in_ these directories (besides other directories)? We'll
 cover that in our next lesson.
 
+## Side Tip: Tab Completion
+
+As you type in commands in the shell, you can use "tab completion." Tab completion allows the shell to be smart and to try and guess what command you want to run when you hit the tab.  If there's only one logical way to complete your command, `bash` will fill in the rest for you, or will show you the possibilities and you can add more letters until you can tab-complete your command.
+
+For example let's say we have the following directory structure with two sub-directories
+
+```bash
+flatiron_school/
+flatiron_building/
+```
+
+If I type `$ cd f` and then hit tab, it will fill in everything up until the conflict so I'll see `$ cd flatiron_`.  If I then add the `s` and hit tab it will fill in `$ cd flatiron_school` and I can hit enter.
+
 ## Conclusion
 
 As we keep exploring and working with the command line, we will start to unlock
