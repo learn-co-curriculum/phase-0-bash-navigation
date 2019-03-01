@@ -12,12 +12,12 @@
 
 ## Introduction
 
-Using the CLI (command line interface) might seem like a big challenge to first-
-time users who are afraid of making mistakes that could impact their computers
-or files. Fear not! We'll step you through it.
+Using the CLI (command line interface) might seem like a big challenge to first-time
+users who are afraid of making mistakes that could break their computers
+or ruin their files. Fear not! We'll step you through it.
 
 The command-line interfaces, or "shells", used on OSX and Linux and the "Windows Subsystem for Linux" or "WSL," is called 
-`bash`.We'll document how to use the `bash` CLI in this module.
+`bash`. We'll document how to use the `bash` CLI in this module.
 
 ## Demonstrate How to Navigate With `bash`
 
@@ -32,6 +32,9 @@ interface_ for controlling your computer (or operating system).
 A great place to start learning about the CLI is by using it to do a task
 you're already familiar with: looking to see what's inside folders like
 your directories and desktop. Programmers call this activity: _navigating_.
+In the CLI we imagine that we're "traveling" to different places. We'll use
+metaphors like "go into the folder" or "go up one folder" or "visit the location
+at such-and-such _path_."
 
 As you learn to navigate with the shell and get to used to it, you'll see that it's friendlier than it
 might seem at first. In no time, you'll be looking like this typing-machine from "Ghost in the Shell:"
@@ -46,7 +49,7 @@ like:
 
 `/parentdirectory/subdirectory/another/subdirectory/`
 
-We call a bit of text meant to communicate location on a file system a _path_. Paths use `/` to denote levels of "nesting."
+We call a bit of text meant to communicate location on a file system a _path_. Paths use `/` to show levels of "nesting."
 
 For example, a user's home directory is often written like: `/Users/username` or `/home/username`. The `/` on the far left of the path name means the very top of the file system "tree." The `/` directory is also called the "root" directory. It contains all the directories that contain sub-directories.
 
@@ -60,7 +63,7 @@ This means the "root" contains a directory called `Users` and `Users` contains `
 
 This means the "root" contains a directory called `home` and `home` contains `username`. Paths like this are typical for Linux.
 
-Obviously, our names (well, most of our names) are not `username`. Instead we log into our systems as `Byron Poodle` or `Nancy the Cat`. Most home directories look something like the "logged in user's" name. How can we find out what our logged in user name is? We can ask the shell to tell us who it thinks we are. We'll use `whoami` to do just this in the next section.
+Obviously, our names (well, most of our names) are not `username`. Instead we log into our systems as `Byron Poodle` or `Nancy the Cat`. How can we find out what our logged in user name is? We can ask the shell to tell us who it thinks we are. We'll use `whoami` to do just this in the next section.
 
 
 ### Identify My Logged-In Username with `whoami`
@@ -75,7 +78,7 @@ $ whoami
 
 The `whoami` command lets you see which user account you're logged in to from a
 terminal window. This might seem obvious, especially if you're logged in on your
-personal computer. Unix machines have multiple accounts by default (though you may not
+personal computer. But Unix machines have multiple accounts by default (though you may not
 have seen them yet). Some of those accounts have superpowers and it's possible
 to really mess up your computer when you're acting as them. Sometimes before
 doing something drastic we like to run a quick `whoami` to make sure we're doing
@@ -84,7 +87,7 @@ as a "super user" – kind of like when you need to enter your login password in
 install new software updates.
 
 My system says I am `kellyegreene`. Based on what we learned about home directories, what
-do you think my home directory is? In the next section, we'll ask the shell to tell us
+do you think my home directory _path_ is? In the next section, we'll ask the shell to tell us
 what our home directory's path is.
 
 ### Identify the Current Working Directory" With `pwd` ("print working directory")
@@ -132,7 +135,6 @@ So in this command example we said: `change directory to the parent folder`.
 
 Let's use `cd` to get back to our home directory.
 
-
 ### Change Directories Using `cd`
 
 The `bash` shell provides default shortcut for your home directory: `~`.
@@ -144,9 +146,10 @@ $ cd ~
 $ pwd
 ```
 
-You'll see you're back in your home directory.
+You'll see you're back in your home directory. Also, by the way, if you enter
+`cd` with no argument, you'll be taken to your home directory.
 
-Another shortcut, that might seem not too useful at first is `.` meaning "the current
+Another shortcut, that might seem not too useful at first, is `.` meaning "the current
 directory I'm in.
 
 If you try this command:
@@ -159,7 +162,8 @@ $ pwd
 You should see you are still in the same directory where you wrote
 the command.
 
-Otherwise, you can give a path to `cd` and it will "take" you there.
+Instead of using shortcuts like `..`, `.`, or `~`, you can give a
+path to `cd` and it will "take" you there.
 
 Try `cd /Applications` or even `cd /`. You can run a `pwd` in these directories
 and see that you've "navigated into" them. Try `cd alksdjfalksdjfalskdjf`. What
@@ -181,39 +185,37 @@ a relative path.
 If I were in my home directory `/Users/kellyegreene` and said `cd
 mixtapes/the-masked-rapper-vol-1`, it would work! If I were in
 `/Users/annoyingbrother` and said `cd mixtapes/the-masked-rapper-vol-1`, `bash`
-would return an error because that sub-directory doesn't exist there – because
-I, Kellye Greene, am the Masked Rapper, while my brother can't rhyme.
+would return an error because that sub-directory doesn't exist there (because
+I, Kellye Greene, am the Masked Rapper, while my brother can't rhyme).
 
 Relative paths exist to make it simpler to move around. Real life is like this
 too. If someone asks if you want to go get a slice of pizza they're probably
 thinking within a few blocks or miles of where you're currently located –
 somewhere close _relatively_ speaking.
 
-"Oh yeah, let's go west on 18th street, cross 6th avenue and go to the place on
+"Oh yeah, let's go West on 18th street, cross 6th Avenue and go to the place on
 the corner."
 
 What would surprise the heck out of them would be if you gave them absolute
 coordinates; and it would be _even more_ surprising if that location were far
 away:
 
-"Oh yeah, let's go to 41.890221 and -87.633904!" Latitude and longitude give
-_absolute_ directions based on the Equator and Prime Meridian. They're not
+What if you replied to the question about pizza with: "Oh yeah, let's go
+to 41.890221 and -87.633904!"
+
+Latitude and longitude give _absolute_ directions based on the Equator and Prime Meridian. They're not
 commonly used by humans to make decisions on where to get lunch (even if
 it points to one of our favorite pizzerias in Chicago).
 
 So far we've been finding out where we are in the file system "tree," how about
-we find out what's in these directories (besides other directories)? We'll
+we find out what's _in_ these directories (besides other directories)? We'll
 cover that in our next lesson.
 
 ## Conclusion
 
 As we keep exploring and working with the command line, we will start to unlock
-and understand its full potential! Adopting the terminal for command-related
-interactions can allow us to become more productive users – we work on multiple
-projects, tasks, and easily switch contexts and folders. It's also the root
-(pardon the pun) of all computing systems. While syntax might vary between
-operating systems, the functions that we are given through terminal applications
-are the same.
+and understand its full potential! Adopting the terminal
+can allow us to become more productive users.
 
 ## Resources
 
