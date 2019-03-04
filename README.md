@@ -62,10 +62,10 @@ It contains all the "top-level directories" that can contain sub-directories
 (...which can contain subdirectories, which can contain subdirectories, on and
 on).
 
-**NOTE** When navigating through a directory, it often helps if we picture the
+**NOTE:** When navigating through a directory, it often helps if we picture the
 file structure like a tree. With this visualization, we can refer to "moving
 up" or "moving down" between directory levels, and keep better track of not
-only where our files are but where we are among our files.
+only where our files are but where we are among our files. Here's an example:
 
 !["Directory tree structure diagram"](https://curriculum-content.s3.amazonaws.com/prework/directory-tree.png)
 
