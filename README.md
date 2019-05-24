@@ -2,7 +2,6 @@
 
 ## Learning Goals
 
-* Define a Unix path
 * Identify typical Unix "Home Directory" paths
 * Identify my logged-in username with `whoami`
 * Identify the current working directory" with `pwd` ("print working directory")
