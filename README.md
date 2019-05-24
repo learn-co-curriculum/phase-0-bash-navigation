@@ -2,12 +2,12 @@
 
 ## Learning Goals
 
-* Identify typical Unix "Home Directory" paths
+* Demonstrate How to Navigate with `bash`
+* Identify our "home directory"
 * Identify my logged-in username with `whoami`
-* Identify the current working directory" with `pwd` ("print working directory")
+* Identify the "current working directory" with `pwd` ("print working directory")
 * Navigate up one directory in the file system
-* Navigate back to a home directory
-* Demonstrate how to navigate the CLI with Bash
+* Change directories using `cd`
 
 ## Introduction
 
@@ -106,7 +106,7 @@ My system says I am `kellyegreene`. Based on what we learned about home
 directories, what do you think my home directory _path_ is? In the next section,
 we'll ask the shell to tell us what our home directory's path is.
 
-### Identify the Current Working Directory" With `pwd` ("print working directory")
+### Identify the "Current Working Directory" With `pwd` ("print working directory")
 
 ```bash
 $ pwd
