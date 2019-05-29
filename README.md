@@ -59,7 +59,7 @@ For example, a user's home directory is often written like: `/Users/username` or
 `/home/username`. The `/` on the far left of the path name means the very top of
 the file system "tree." The `/` directory is also called the "root" directory.
 It contains all the "top-level directories" that can contain sub-directories
-(...which can contain subdirectories, which can contain subdirectories, on and
+(...which can contain sub-directories, which can contain sub-directories, on and
 on).
 
 **NOTE:** When navigating through a directory, it often helps if we picture the
