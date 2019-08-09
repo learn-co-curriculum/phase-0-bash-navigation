@@ -66,7 +66,7 @@ file structure like a tree. With this visualization, we can refer to "moving
 up" or "moving down" between directory levels, and keep better track of not
 only where our files are but where we are among our files. Here's an example:
 
-!["Directory tree structure diagram"](https://curriculum-content.s3.amazonaws.com/prework/directory-tree.png)
+!["Directory tree structure diagram"](https://curriculum-content.s3.amazonaws.com/cli-essentials/bash-navigation/Image_58_DirectoryStructureDiagram.png)
 
 Let's take a second to look at some typical home directories:
 
