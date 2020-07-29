@@ -1,8 +1,8 @@
-# Navigation Commands in Bash
+# Navigation Commands in Zsh
 
 ## Learning Goals
 
-* Demonstrate How to Navigate with `bash`
+* Demonstrate How to Navigate with `bash` and `zsh`
 * Identify our "home directory"
 * Identify my logged-in username with `whoami`
 * Identify the "current working directory" with `pwd` ("print working directory")
@@ -15,9 +15,29 @@ Using the CLI (command line interface) might seem like a big challenge to first-
 time users who are afraid of making mistakes that could break their computers or
 ruin their files. Fear not! We'll step you through it.
 
-The command-line interfaces, or "shells", used on OSX, Linux, and the "Windows
-Subsystem for Linux (WSL)," are called `bash`. We'll document how to use the
-`bash` CLI in this module.
+There are two common command-line interfaces, or "shells", used on OSX, Linux,
+and the "Windows Subsystem for Linux (WSL)," - `zsh` and `bash`. `zsh` is
+actually an extension of `bash` and, for our purposes here, behaves in exactly
+the same way as `bash`. So for simplicity, we'll just refer to `bash` from here
+on out.
+
+In this lesson, we'll document how to use the `bash` CLI to navigate your
+computer's file directories.
+
+## Opening Your Terminal
+
+Before we can start exploring `bash`, we need to open a terminal window to work
+in.
+
+For Mac users, you can open your terminal using Spotlight. Press command (`⌘`)
+and spacebar together to bring up Spotlight, then type **terminal** to search
+through your computer's apps. Click on the terminal app when it appears to open
+it up.
+
+For Windows users, the process is a bit more complicated because we need to set
+up the Windows Subsystem for Linux in order to start working with `bash`. Follow
+along for now - once you've got your local environment set up, you'll be able to
+run the commands discussed here.
 
 ## Demonstrate How to Navigate with `bash`
 
@@ -31,8 +51,8 @@ interface_ for controlling your computer (or operating system).
 
 A great place to start learning about the CLI is by using it to do a task
 you're already familiar with: looking to see what's inside folders like
-your directories and desktop. Programmers call this activity: _navigating_.
-In the CLI we imagine that we're "traveling" to different places. We'll use
+your directories and desktop. Programmers call this activity _'navigating.'_
+In the CLI, we imagine that we're "traveling" to different places. We'll use
 metaphors like "go into the folder" or "go up one folder" or "visit the location
 at such-and-such _path_."
 
