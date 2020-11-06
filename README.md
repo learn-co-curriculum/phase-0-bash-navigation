@@ -19,6 +19,9 @@ The command-line interfaces, or "shells", used on OSX, Linux, and the "Windows
 Subsystem for Linux (WSL)," are called `bash`. We'll document how to use the
 `bash` CLI in this module.
 
+**Note**: if you are using a Windows machine, you will not be able to use the 
+commands covered in this lesson until you have set up WSL.
+
 ## Demonstrate How to Navigate with `bash`
 
 To review: `bash` is a text-based interpreter that provides a _command-line
