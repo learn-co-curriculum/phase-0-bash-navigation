@@ -11,9 +11,7 @@
 
 ## Introduction
 
-Using the CLI (command line interface) might seem like a big challenge to first-
-time users who are afraid of making mistakes that could break their computers or
-ruin their files. Fear not! We'll step you through it.
+Using the CLI (command line interface) might seem like a big challenge to first-time users who are afraid of making mistakes that could break their computers or ruin their files. Fear not! We'll step you through it.
 
 The command-line interfaces, or "shells", used on OSX, Linux, and the "Windows
 Subsystem for Linux (WSL)," are called `bash`. We'll document how to use the
@@ -151,7 +149,7 @@ The `cd` command stands for "**c**hange **d**irectory".
 
 The `..` is a shortcut for the directory _above_ the working directory. The
 `bash` shell provides a series of "shortcuts" for some commonly-used file system
-paths. `..` means "this directory's containing folder. These shortcuts look
+paths. `..` means "this directory's containing folder". These shortcuts look
 strange but they're designed to be _short_ and therefore _easy to type_ and
 therefore _fast_ and, as we've hinted, the CLI is all about speed.
 
