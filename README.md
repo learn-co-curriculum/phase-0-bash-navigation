@@ -11,9 +11,7 @@
 
 ## Introduction
 
-Using the CLI (command line interface) might seem like a big challenge to first-
-time users who are afraid of making mistakes that could break their computers or
-ruin their files. Fear not! We'll step you through it.
+Using the CLI (command line interface) might seem like a big challenge to first-time users who are afraid of making mistakes that could break their computers or ruin their files. Fear not! We'll step you through it.
 
 The command-line interfaces, or "shells", used on OSX, Linux, and the "Windows
 Subsystem for Linux (WSL)," are called `bash`. We'll document how to use the
