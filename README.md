@@ -1,4 +1,4 @@
-# Navigation Commands in Bash and Zsh
+# Bash Navigation
 
 ## Learning Goals
 
