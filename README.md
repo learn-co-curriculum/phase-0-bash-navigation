@@ -11,7 +11,9 @@
 
 ## Introduction
 
-Using the CLI (command line interface) might seem like a big challenge to first-time users who are afraid of making mistakes that could break their computers or ruin their files. Fear not! We'll step you through it.
+Using the CLI (command line interface) might seem like a big challenge to
+first-time users who are afraid of making mistakes that could break their
+computers or ruin their files. Fear not! We'll step you through it.
 
 The command-line interfaces, or "shells", used on OSX, Linux, and the "Windows
 Subsystem for Linux (WSL)," are called `bash`. We'll document how to use the
@@ -29,12 +31,12 @@ interface_ for controlling your computer (or operating system).
 > **SH**ell. As the word "again" suggests, there are _other_ shells, some of
 > which came before `bash`. There are also shells that have come along _since_ > `bash`. Nevertheless most programmers use `bash` or something very similar.
 
-A great place to start learning about the CLI is by using it to do a task
-you're already familiar with: looking to see what's inside folders like
-your directories and desktop. Programmers call this activity: _navigating_.
-In the CLI we imagine that we're "traveling" to different places. We'll use
-metaphors like "go into the folder" or "go up one folder" or "visit the location
-at such-and-such _path_."
+A great place to start learning about the CLI is by using it to do a task you're
+already familiar with: looking to see what's inside folders like your
+directories and desktop. Programmers call this activity: _navigating_. In the
+CLI we imagine that we're "traveling" to different places. We'll use metaphors
+like "go into the folder" or "go up one folder" or "visit the location at
+such-and-such _path_."
 
 As you learn to navigate with the shell and get to used to it, you'll see that
 it's friendlier than it might seem at first. In no time, you'll be looking like
@@ -49,8 +51,8 @@ the program for the first time after a reboot), you will be placed in (remember
 our "travel" metaphor!) your home directory. Directory names on Unix systems are
 written like:
 
-```txt
-/parentdirectory/subdirectory/another/subdirectory/
+```console
+/parentdirectory/subdirectory/another/subdirectory
 ```
 
 We call a bit of text meant to communicate location on a file system a _path_.
@@ -64,22 +66,22 @@ It contains all the "top-level directories" that can contain sub-directories
 on).
 
 **NOTE:** When navigating through a directory, it often helps if we picture the
-file structure like a tree. With this visualization, we can refer to "moving
-up" or "moving down" between directory levels, and keep better track of not
-only where our files are but where we are among our files. Here's an example:
+file structure like a tree. With this visualization, we can refer to "moving up"
+or "moving down" between directory levels, and keep better track of not only
+where our files are but where we are among our files. Here's an example:
 
 !["Directory tree structure diagram"](https://curriculum-content.s3.amazonaws.com/cli-essentials/bash-navigation/Image_58_DirectoryStructureDiagram.png)
 
 Let's take a second to look at some typical home directories:
 
-```txt
+```console
 /Users/username
 ```
 
 This means the "root" contains a directory called `Users` and `Users` contains
 `username`. Paths like this are typical for Mac OSX.
 
-```txt
+```console
 /home/username
 ```
 
@@ -97,7 +99,7 @@ just this in the next section.
 
 Let's start simply. Let's ask the computer who I am logged in as:
 
-```bash
+```console
 $ whoami
 ```
 
@@ -118,7 +120,7 @@ we'll ask the shell to tell us what our home directory's path is.
 
 ### Identify the "Current Working Directory" With `pwd` ("print working directory")
 
-```bash
+```console
 $ pwd
 ```
 
@@ -139,7 +141,7 @@ containing directory.
 
 Try typing this in the command line:
 
-```bash
+```console
 $ cd ..
 $ pwd
 ```
@@ -148,7 +150,7 @@ You "moved up" one level of nesting, so you should now see that you are one
 level up from where you were and one level closer to the "root" directory.
 In your terminal see this by using `pwd`:
 
-```txt
+```console
 /Users
 ```
 
@@ -172,36 +174,35 @@ The `bash` shell provides default shortcut for your home directory: `~`. Use
 
 Then, when you run this command:
 
-```bash
+```console
 $ cd ~
 $ pwd
 ```
 
 You'll see you're back in your home directory. Use `pwd` to verify!
 
-> **SHORTCUT** By the way, if you enter `cd` with no argument, you'll
-> be taken to your home directory.
+> **SHORTCUT** By the way, if you enter `cd` with no argument, you'll be taken
+> to your home directory.
 
 Another shortcut, that might seem not too useful at first, is `.` meaning "the
 current directory I'm in.
 
 If you try this command:
 
-```bash
+```console
 $ cd .
 $ pwd
 ```
 
-You should see you are still in the same directory where you wrote
-the command.
+You should see you are still in the same directory where you wrote the command.
 
-Instead of using shortcuts like `..`, `.`, or `~`, you can give a
-path to `cd` and it will "take" you there.
+Instead of using shortcuts like `..`, `.`, or `~`, you can give a path to `cd`
+and it will "take" you there.
 
 Try `cd /Applications` or even `cd /`. You can run a `pwd` in these directories
 and see that you've "navigated into" them. Try `cd alksdjfalksdjfalskdjf`. What
-error does `bash` give you? Is that what you expected? We'll discuss more
-about the types of paths you can give `bash` in the next section.
+error does `bash` give you? Is that what you expected? We'll discuss more about
+the types of paths you can give `bash` in the next section.
 
 ### Paths in Shell
 
@@ -211,22 +212,23 @@ can recognize them because they start with `/`. For example
 `/Users/kellyegreene`, is an absolute path.
 
 A relative path is a path **relative** to the working directory you're "in" at
-the time you write the command. They start
-with the name of a directory or a file. For example `kellyegreene/Documents`, is
-a relative path.
+the time you write the command. They start with the name of a directory or a
+file. For example `kellyegreene/Documents`, is a relative path.
 
-If I were in my home directory `/Users/kellyegreene` and said `cd mixtapes/the-masked-rapper-vol-1`, it would work! If I were in
+If I were in my home directory `/Users/kellyegreene` and said
+`cd mixtapes/the-masked-rapper-vol-1`, it would work! If I were in
 `/Users/annoyingbrother` and said `cd mixtapes/the-masked-rapper-vol-1`, `bash`
-would return an error because that sub-directory doesn't exist there (because
-I, Kellye Greene, am the Masked Rapper, while my brother can't rhyme).
+would return an error because that sub-directory doesn't exist there (because I,
+Kellye Greene, am the Masked Rapper, while my brother can't rhyme).
 
-Absolute paths and relative paths might sound confusing in CLI universe, but
-we intuitively understand this difference in our day-to-day lives. We usually call
+Absolute paths and relative paths might sound confusing in CLI universe, but we
+intuitively understand this difference in our day-to-day lives. We usually call
 this difference _context_.
 
-If someone asks if you want to go get a slice of pizza for lunch they're probably
-thinking of somewhere close to where you're currently located –
-somewhere close _relatively_ speaking. They're expecting you to say something like:
+If someone asks if you want to go get a slice of pizza for lunch they're
+probably thinking of somewhere close to where you're currently located –
+somewhere close _relatively_ speaking. They're expecting you to say something
+like:
 
 "Oh yeah, let's go West on 18th street, cross 6th Avenue and go to the place on
 the corner."
@@ -258,9 +260,9 @@ command.
 For example let's say we have the following directory structure with two sub-
 directories:
 
-```txt
-flatiron_school/
-flatiron_building/
+```console
+/flatiron_school
+/flatiron_building
 ```
 
 If I type `$ cd f` and then hit `tab`, it will fill in everything up until the
@@ -270,8 +272,8 @@ will fill in `$ cd flatiron_school` and I can hit enter.
 ## Conclusion
 
 As we keep exploring and working with the command line, we will start to unlock
-and understand its full potential! Adopting the terminal
-can allow us to become more productive users.
+and understand its full potential! Adopting the terminal can allow us to become
+more productive users.
 
 ## Resources
 
