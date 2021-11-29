@@ -29,7 +29,8 @@ interface_ for controlling your computer (or operating system).
 
 > **ASIDE**: Bash is actually an acronym which stands for **B**ourne-**A**gain
 > **SH**ell. As the word "again" suggests, there are _other_ shells, some of
-> which came before `bash`. There are also shells that have come along _since_ > `bash`. Nevertheless most programmers use `bash` or something very similar.
+> which came before `bash`. There are also shells that have come along _since_ >
+> `bash`. Nevertheless most programmers use `bash` or something very similar.
 
 A great place to start learning about the CLI is by using it to do a task you're
 already familiar with: looking to see what's inside folders like your
@@ -279,7 +280,9 @@ more productive users.
 
 - [Lifehacker on the Command Line](http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything)
 - [Environment Variables](http://cbednarski.com/articles/understanding-environment-variables-and-the-unix-path/)
-- [Built-in Shell Commands](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html) _Very useful_
+-
+  [Built-in Shell Commands](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html)
+  _Very useful_
 - [15 Useful Bash Commands](http://www.thegeekstuff.com/2010/08/bash-shell-builtin-commands/)
 - [The One True Path](http://blog.seldomatt.com/blog/2012/10/08/bash-and-the-one-true-path/)
 - [More on paths - Wikipedia](<http://en.wikipedia.org/wiki/Path_(computing)>)
