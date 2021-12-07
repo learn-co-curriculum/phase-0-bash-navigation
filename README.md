@@ -14,21 +14,21 @@ Using the CLI (command line interface) might seem like a big challenge to
 first-time users who are afraid of making mistakes that could break their
 computers or ruin their files. Fear not! We'll step you through it.
 
-The command-line interfaces, or "shells", used on Linux, older Mac operating
-systems, and the "Windows Subsystem for Linux (WSL)," are called `bash`; newer
-Mac operating systems now come with `zsh` as the default shell. There are other
-shells available as well, but most programmers use shells that are very similar
-to `bash`. The `bash` commands we will cover in this section should prepare you
-to use any of the shells most commonly used by developers, including `zsh`.
+Unix-like operating systems like MacOS, Linux, and Windows Subsystem for Linux
+(WSL) all have a command-line interface, or "shell" application. While there are
+several different shell applications, like `zsh` (the default for MacOS) and
+`bash` (the default for Ubuntu in WSL), all these shell applications share a set
+of common commands which developers are familiar with. In this section, we'll
+cover some of the most common commands used by developers.
 
 **Note**: if you are using a Windows machine, you will not be able to use the
 commands covered in this lesson until you have set up WSL.
 
-## Demonstrate How to Navigate with `bash`
+## Demonstrate How to Navigate with a Command-Line Interface
 
-To review: `bash` is a text-based interpreter that provides a _command-line
-interface_ for controlling your computer (or operating system). As a developer,
-you will use `bash` to move around in your project directories to accomplish
+To review: a **shell** is a text-based interpreter that provides a _command-line
+interface_ for controlling your computer. As a developer, you will use **shell
+commands** to move around in your project directories to accomplish
 different tasks (e.g., creating, renaming, moving or copying files or folders).
 Programmers call this activity: _navigating_. In the CLI we imagine that we're
 "traveling" to different places. We'll use metaphors like "go into the folder"
@@ -105,7 +105,7 @@ easier way: we can ask our computer to tell us what path we're in!
 
 ### Identify the "Current Working Directory" With `pwd` ("print working directory")
 
-
+Try running the following:
 
 ```console
 $ pwd
