@@ -1,9 +1,9 @@
-# Bash Navigation
+# CLI Navigation
 
 ## Learning Goals
 
-- Demonstrate How to Navigate with `bash`
-- Identify our "home directory"
+- Demonstrate How to Navigate from the CLI
+- Identify your "home directory"
 - Identify your logged-in username with `whoami`
 - Identify the "current working directory" with `pwd` ("print working directory")
 - Navigate directories using `cd`
@@ -89,8 +89,8 @@ $ whoami
 ```
 
 **Note:** _Any time you see the_ `$` _character, you shouldn't type it in. This
-is just a standard way to represent a bash prompt. Yours may or may not be a_
-`$`.
+is just a standard way to represent the command prompt in a shell application.
+Yours may or may not be a_ `$`.
 
 !["whoami"](https://curriculum-content.s3.amazonaws.com/prework/whoami.jpg)
 
@@ -119,9 +119,9 @@ The `pwd` command stands for "**p**rint **w**orking **d**irectory". As you
 city, you can look for street signs to find out where you are. The `pwd` command
 acts like those street signs. You'll never be lost again!
 
-We've just used `pwd` to verify that when we open a `bash` session the operating
-system automatically "puts" us in our home directory. Now let's learn how to do
-some real "navigation" in our file structure.
+We've just used `pwd` to verify that when we open the shell application, the
+operating system automatically "puts" us in our home directory. Now let's learn
+how to do some real "navigation" in our file structure.
 
 ### Change Directories Using `cd`
 
@@ -142,15 +142,15 @@ Verify this by running `pwd` again:
 The `cd` command stands for "**c**hange **d**irectory".
 
 The `..` is a shortcut for the directory _above_ the working directory. The
-`bash` shell provides a series of "shortcuts" for some commonly-used file system
-paths. `..` means "this directory's containing folder". These shortcuts look
-strange but they're designed to be _short_ and therefore _easy to type_ and
+shell application provides a series of "shortcuts" for some commonly-used file
+system paths. `..` means "this directory's containing folder". These shortcuts
+look strange but they're designed to be _short_ and therefore _easy to type_ and
 therefore _fast_ and, as we've hinted, the CLI is all about speed.
 
 So in this command example we said: `change directory to the parent folder`. You
 could run the same command again to navigate up to the `/` (root) directory.
 
-Another shortcut, that might seem not too useful at first, is `.` meaning "the
+Another shortcut, that might not seem very useful at first, is `.` meaning "the
 current directory I'm in."
 
 If you try this command:
@@ -163,8 +163,8 @@ $ pwd
 You should see you are still in the same directory where you wrote the command.
 You will learn a bit later in the course about when and how the `.` is used.
 
-The bash shell provides one additional shortcut: `~`. This symbol is used to
-indicate the home directory.
+The shell application provides one additional shortcut: `~`. This symbol is used
+to indicate the home directory.
 
 If you haven't already, use `cd ..` a second time to go "up" another level to
 the root directory. Run `pwd` to verify; you should see `/` output.
@@ -203,13 +203,14 @@ is a _relative_ path.
 
 The difference between the two is that the _absolute_ path will always get you
 to the destination folder, regardless of where you currently are in the file
-structure. The absolute path tells bash to start from the root directory (`/`),
-then go "down" into `Users`, then "down" again into `kellyegreene`.
+structure. The absolute path tells the shell application to start from the root
+directory (`/`), then go "down" into `Users`, then "down" again into
+`kellyegreene`.
 
-The _relative_ path, on the other hand, tells bash where to navigate
-**relative** to where you currently are in the file structure. So, if I'm in the
-root directory, I can use the `cd Users` command, but if I'm somewhere else in
-the file structure, typing `cd Users` will give me an error:
+The _relative_ path, on the other hand, tells the shell application where to
+navigate **relative** to where you currently are in the file structure. So, if
+I'm in the root directory, I can use the `cd Users` command, but if I'm
+somewhere else in the file structure, typing `cd Users` will give me an error:
 
 ```console
 cd: no such file or directory: Users
@@ -230,9 +231,9 @@ longitude of your house, which will work no matter where they start from.
 As you type in commands in the shell, you can use "tab completion." Tab
 completion allows the shell to be smart and to try and guess what command you
 want to run when you hit the tab. If there's only one logical way to complete
-your command, `bash` will fill in the rest for you. If there are multiple
-possibilities, it will show those to you and you can continue to add letters
-until `bash` can tell exactly what you're trying to do.
+your command, the shell application will fill in the rest for you. If there are
+multiple possibilities, it will show those to you and you can continue to add
+letters until the shell application can tell exactly what you're trying to do.
 
 For example let's say I'm in a directory that has the following two sub-
 directories:
@@ -246,7 +247,7 @@ If I type `$ cd f` and then hit `tab`, it will fill in everything that's the
 same, so I'll see `$ cd flatiron_`. If I then add the `s` and hit `tab` it will
 fill in `$ cd flatiron_school` and I can hit enter.
 
-Tab completion can also be used with the other `bash` commands we'll be learning
+Tab completion can also be used with the other shell commands we'll be learning
 in the lessons that follow.
 
 ## Conclusion
