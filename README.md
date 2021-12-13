@@ -115,7 +115,7 @@ the CLI. This might seem obvious, especially if you're logged in on your
 personal computer. But Unix machines have multiple accounts by default (though
 you may not have seen them yet).
 
-My system says I am `kellyegreene`. Based on what we learned about home
+My system says I am `dorothyvaughaun`. Based on what we learned about home
 directories, what do you think my home directory _path_ is? In the next section,
 we'll ask the shell to tell us what our home directory's path is.
 
@@ -210,17 +210,18 @@ the types of paths you can give `bash` in the next section.
 The path supplied to the `cd` command can be either _absolute_ or _relative_
 paths. An absolute path is a path that always gets you to the same folder. You
 can recognize them because they start with `/`. For example
-`/Users/kellyegreene`, is an absolute path.
+`/Users/dorothyvaughaun`, is an absolute path.
 
 A relative path is a path **relative** to the working directory you're "in" at
 the time you write the command. They start with the name of a directory or a
-file. For example `kellyegreene/Documents`, is a relative path.
+file. For example `dorothyvaughaun/Documents`, is a relative path.
 
-If I were in my home directory `/Users/kellyegreene` and said
-`cd mixtapes/the-masked-rapper-vol-1`, it would work! If I were in
-`/Users/annoyingbrother` and said `cd mixtapes/the-masked-rapper-vol-1`, `bash`
-would return an error because that sub-directory doesn't exist there (because I,
-Kellye Greene, am the Masked Rapper, while my brother can't rhyme).
+If I were in my home directory `/Users/dorothyvaughaun` and typed
+`cd nasa_files/super_secret_nasa_stuff.md`, it would work! If I were in
+`/Users/not_a_famous_mathematician` and said
+`cd nasa_files/super_secret_nasa_stuff.md` bash would return an error because
+that sub-directory doesn't exist there, because it only exists under
+`/Users/dorothyvaughaun`.
 
 Absolute paths and relative paths might sound confusing in CLI universe, but we
 intuitively understand this difference in our day-to-day lives. We usually call
