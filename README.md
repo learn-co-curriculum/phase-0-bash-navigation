@@ -21,8 +21,8 @@ several different shell applications, like `zsh` (the default for MacOS) and
 of common commands which developers are familiar with. In this section, we'll
 cover some of the most common commands used by developers.
 
-**Note**: if you are using a Windows machine, you will not be able to use the
-commands covered in this lesson until you have set up WSL.
+To follow along, go ahead and launch your terminal (the Terminal application for
+MacOS and Ubuntu for WSL).
 
 ## Demonstrate How to Navigate with a Command-Line Interface
 
